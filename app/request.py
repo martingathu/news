@@ -46,7 +46,7 @@ def process_sources(sources_list):
 
 def get_articles(source_id):
     get_articles_url = base_url_article.format(source_id, api_key)
-    res = requests.get(articles_url)
+    res = requests.get(get_articles_url)
     articles_data = res.json().get('articles')
 
     return process_articles(articles_data)
@@ -58,7 +58,7 @@ def process_articles(articles_list):
     articles = []
     if articles_list:
         for article in articles_list:
-            article = Article(article['id'], article['name'], article['author'], article['title'], article['description'], article['url'], article['urlToImage'], article['publishedAt'], article['content'])
+            # article = Article(article['id'], article['name'], article['author'], article['title'], article['description'], article['url'], article['urlToImage'], article['publishedAt'], article['content'])
             articles.append(article)
         return articles
 
