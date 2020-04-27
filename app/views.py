@@ -1,6 +1,5 @@
 from app import app
 from flask import render_template
-# from newsapi import NewsApiClient
 from .request import get_sources, get_articles
 
 
