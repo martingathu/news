@@ -1,5 +1,7 @@
 import unittest
 from models.news import Source, Article
+
+# Test class for the sources class
 class SourcesTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Movie class
@@ -24,7 +26,7 @@ class SourcesTest(unittest.TestCase):
         self.assertEquals(self.new_source.country,'us')
         
 
-
+#test class for the articles
 class ArticlesTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Movie class
