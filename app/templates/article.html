@@ -4,14 +4,14 @@
 {% block body%}
 <div class="container">
 
-   <h3> Top Headlines</h3>
+   <h2 class="lead"> Top Headlines</h2>
       <div class="row">
         {% for article in articles %}
-		        <div class="col-md-5">
+		        <div class="col-md-5 border border-primary" style="margin: 10px;">
 				        <div class="thumbnail">
-				          <a href="{{article.url}}" target="_blank"><img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive" class="card-img-top"></a>
+				          <a href="{{article.url}}" target="_blank"><img src="{{article.urlToImage}}" alt="{{article.title}}" class="img-responsive img-thumbnail"></a>
 						      <div class="caption">
-						        <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h4>
+						        <h5><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h5>
 						        <p>{{article.description}}</p>
 						        <a href="{{article.url}}" target="_blank"> Read More</a>
 	        
