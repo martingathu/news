@@ -32,3 +32,44 @@ As a user I would like to:
 * pip
 * virtualenv
 
+### Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/martingathu/news/
+        $ cd news
+
+## Running the Application
+* Creating the virtual environment
+
+        $ python3.6 -m venv --without-pip virtual
+        $ source virtual/bin/env
+        $ curl https://bootstrap.pypa.io/get-pip.py | python 
+        
+* Installing Flask and other Modules
+
+        $ python3.6 -m pip install Flask
+        $ python3.6 -m pip install Flask-Bootstrap
+        $ python3.6 -m pip install requests
+        
+* Setting up the API Key
+        
+        To be able to gather article info from the News API you will need an API Key.
+        
+        * Visit https://newsapi.org/ and register for an API key.
+        * Insert the API Key you received from News Api where <Your-Api-Key> is.
+        
+* To run the application, in your terminal:
+        $ python3.6 run.py
+
+## Testing the Application
+* To run the tests for the class files:
+
+        $ python3.6 -m unittest discover -s tests
+   
+## Technologies Used
+* Python3.6
+* Flask
+
+
+## License
+MIT &copy;2020 [Martin Gathu](https://github.com/martingathu/)
