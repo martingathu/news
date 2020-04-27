@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+    {% block content %}
+    {% if sources %}
+        {% for source in sources %}
+        <div class="container-fluid" style="background-color: rgb(189, 189, 194)">
+            <div class="container">
+                <div class="card" style="background-color:aliceblue;margin-top: 2%;">
+                    <div class="card-body" style="padding:3%;">
+                        <h2 style="font-weight: bolder">{{source.name|upper}}</h2>
+                        <p>{{source.description}}</p>
+                        <a href="/articles/{{source.id}}" class="btn btn-success" style="font-weight: bold;font-size: 23px;">view articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+
