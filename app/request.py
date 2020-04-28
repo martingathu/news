@@ -4,16 +4,11 @@ from app.models.news import Source, Article
 import requests
 
 
-
-NEWS_SOURCES_BASE_URL ='https://newsapi.org/v2/sources?language=en&apiKey={}'
-ARTICLES_BASE_URL ='https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
-NEWS_API_KEY ='4884752d29c84db4a7601e9a3a19d7f9'
-
-# Getting api key
-api_key = NEWS_API_KEY
 # Getting the news source and article base url
-base_url = NEWS_SOURCES_BASE_URL
-base_url_article = ARTICLES_BASE_URL
+
+base_url = app.config['NEWS_SOURCES_BASE_URL']
+base_url_article = app.config['ARTICLES_BASE_URL']
+api_key = app.config['NEWS_API_KEY']
 
 def get_sources():
     '''
